@@ -25,4 +25,11 @@ class Notebook:
     def __str__(self):
         return f"Date: {self.creation_date}\n{self.title}: {self.text}"
 
+    def add_note(self, title, text, importance):
+        new_code = len(self.notes) + 1
+        new_note = Note(new_code, title, text, importance)
+        self.notes.append(new_note)
+        return new_code
+
+
 
